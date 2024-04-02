@@ -29,4 +29,4 @@ La función `plot_neo_data(data)` genera un gráfico de dispersión que muestra 
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, siéntete libre de hacer fork y enviar un pull request con tus sugerencias.
 
 ## Autor
-Este proyecto fue desarrollado por ([Néstor Jimeno](https://github.com/nestorjimeno)).
+Este proyecto fue desarrollado por Néstor Jimeno ([GitHub](https://github.com/nestorjimeno) y [LinkedIn](https://www.linkedin.com/in/nestorjimeno/)).
