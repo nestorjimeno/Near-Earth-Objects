@@ -91,6 +91,7 @@ def plot_pie_chart(data):
     plt.title(f'Proportion of Potentially Hazardous and Non-hazardous NEOs ({start_date} to {end_date})')
     plt.axis('equal')  # Asegura que el gráfico es un círculo.
     plt.show()
+    plt.savefig('pie.png')
 
 def plot_neo_data(data):
     """Genera un gráfico de dispersión que muestra la relación entre la distancia mínima
@@ -146,6 +147,7 @@ def plot_neo_data(data):
     plt.grid(True)
     plt.tight_layout()
     plt.show()
+    plt.savefig('scatter.png')
 
 
 def get_start_and_end_dates(data):
