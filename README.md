@@ -1,34 +1,32 @@
-# NASA NEO API Data Fetcher
+# Visualización de Objetos Cercanos a la Tierra (NEOs) con Python y la API de la NASA
 
-Este script Python se utiliza para obtener datos sobre objetos cercanos a la Tierra (NEO, por sus siglas en inglés) de la NASA utilizando su API.
+## Introducción
+¿Es realmente posible que tengamos un "encuentro" con un meteorito? Los Objetos Cercanos a la Tierra o Near Earth Objects (NEO), son cuerpos que orbitan cerca de nuestro planeta, algunos de los cuales pueden llegar a suponer una amenaza real. En este proyecto, vamos a ver cómo utilizar Python y la API abierta de la NASA para obtener información sobre ellos: conocer su tamaño, su velocidad y su proximidad a la Tierra.
 
-## Requisitos
+La NASA proporciona una enorme cantidad de información pública a través de sus APIs. La que utilizamos en este proyecto es NeoWs (Near Earth Object Web Service), un servicio web RESTful para información sobre asteroides cercanos a la Tierra. Con NeoWs, un usuario puede buscar asteroides basados en su fecha de aproximación más cercana a la Tierra, buscar un asteroide específico con su identificador de pequeño cuerpo de la NASA JPL, así como explorar el conjunto de datos en general.
 
-- Python 3.x
-- `dotenv` (instalable a través de `pip install python-dotenv`)
-- Una clave de API de la NASA NEO (se puede obtener [aquí](https://api.nasa.gov/))
+## Cómo usar
+Para ejecutar este proyecto, primero asegúrate de tener Python instalado en tu sistema. Luego, sigue estos pasos:
 
-## Configuración
+1. Clona este repositorio en tu máquina local.
+2. Instala las dependencias necesarias ejecutando `pip install -r requirements.txt`.
+3. Crea un archivo `.env` en el directorio raíz del proyecto y añade tu API Key de la NASA siguiendo el formato `API_KEY=TU_API_KEY`.
+4. Ejecuta el script principal `api-nasa.py` con el comando `python api-nasa.py`.
 
-1. Clona este repositorio o copia el contenido del script a tu entorno.
-2. Crea un archivo `.env` en el mismo directorio que el script.
-3. Dentro del archivo `.env`, agrega tu clave de API de la NASA NEO de la siguiente manera:
-    ```
-    API_KEY=TU_CLAVE_DE_API
-    ```
-4. Guarda el archivo `.env`.
+## Funcionalidades
+Este proyecto consta de las siguientes funcionalidades principales:
 
-## Uso
+### Obtención de datos de la NASA
+La función `get_data()` se encarga de obtener datos de objetos cercanos a la Tierra (NEO) de la API de la NASA para un rango de fechas especificado.
 
-1. Ejecuta el script Python.
-2. Los datos sobre objetos cercanos a la Tierra para la fecha especificada (o por defecto, la fecha actual) se recuperarán de la API de la NASA NEO y se imprimirán en la consola.
+### Visualización de datos en gráfico circular
+La función `plot_pie_chart(data)` representa en un gráfico circular la relación entre NEOs potencialmente peligrosos y no peligrosos.
 
-## Ejemplo
+### Visualización de datos en gráfico de dispersión
+La función `plot_neo_data(data)` genera un gráfico de dispersión que muestra la relación entre la distancia mínima a la Tierra y la velocidad relativa de los Objetos Cercanos a la Tierra (NEOs), con el tamaño del cuerpo representado por el tamaño de los puntos en el gráfico.
 
-```python
-python nasa_neo_fetcher.py
-```
+## Contribuciones
+Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, siéntete libre de hacer fork y enviar un pull request con tus sugerencias.
 
-## Licencia
-
-Este proyecto está bajo la licencia MIT.
+## Autor
+Este proyecto fue desarrollado por ([Néstor Jimeno](https://github.com/nestorjimeno)).
